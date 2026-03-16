@@ -1,0 +1,18 @@
+let slideIndex = 0;
+
+function showSlides(){
+let slides = document.querySelectorAll(".hero");
+slides.forEach(s=>s.style.display="none");
+
+slideIndex++;
+
+if(slideIndex > slides.length){
+slideIndex = 1;
+}
+
+slides[slideIndex-1].style.display = "flex";
+
+setTimeout(showSlides,4000);
+}
+
+window.onload = showSlides;
